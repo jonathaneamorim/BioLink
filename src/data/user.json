@@ -1,29 +1,30 @@
 {
   "profile": {
-    "name": "Jonas",
-    "nickname": "Jonas Dev",
-    "username": "@jonas_dev",
+    "name": "Jonathan",
+    "nickname": "Jonathan Amorim",
+    "username": "@jonathaneamorim",
     "bio": "Software Developer | Next.js & Java",
-    "profileImage": ""
+    "profileImage": "/profile.jpg"
   },
   "contacts": {
-    "email": "jonas@exemplo.com",
-    "phone": "+55 11 99999-9999",
-    "linkedin": "linkedin.com/in/jonas",
-    "github": "github.com/jonas",
-    "telegram": "@jonas_tele"
+    "email": "jonathaneamorim@gmail.com",
+    "phone": "+55 00 00000-0000",
+    "linkedin": "linkedin.com/in/jonathanamorim/",
+    "github": "github.com/jonathaneamorim",
+    "telegram": ""
   },
   "theme": {
-    "backgroundColor": "#0f172a",
-    "textColor": "#ffffff",
-    "buttonColor": "#1e293b",
-    "buttonTextColor": "#ffffff",
-    "bgMobile": "/bg-mobile.jpg",
-    "bgDesktop": "/bg-desktop.jpg"
-  },
+      "pageBackground": "#0f172a",
+      "pageText": "#f8fafc",
+      "cardBackground": "#1e293b",
+      "cardText": "#ffffff",
+      "buttonBackground": "#334155",
+      "buttonText": "#ffffff"
+    },
   "links": [
-    { "id": 1, "label": "GitHub", "url": "https://github.com", "icon": "github" },
-    { "id": 2, "label": "LinkedIn", "url": "https://linkedin.com", "icon": "linkedin" },
-    { "id": 3, "label": "Instagram", "url": "https://instagram.com", "icon": "instagram" }
+    { "id": 1, "label": "GitHub", "url": "https://github.com/jonathaneamorim", "icon": "github" },
+    { "id": 2, "label": "LinkedIn", "url": "https://www.linkedin.com/in/jonathanamorim/", "icon": "linkedin" },
+    { "id": 3, "label": "Instagram", "url": "https://www.instagram.com/olijonathan_/", "icon": "instagram" },
+    { "id": 4, "label": "Portfólio", "url": "https://jonathaneamorim.github.io/", "icon": "briefcase" }
   ]
 }
