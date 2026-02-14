@@ -8,7 +8,7 @@ Este projeto funciona como um "Linktree" pessoal, onde você controla 100% dos d
 
 - **Framework:** Next.js 16 (App Router)
 - **Estilização:** Tailwind CSS
-- **Ícones:** Lucide React
+- **Ícones:** SVGs Locais Otimizados
 - **Linguagem:** TypeScript
 
 ---
@@ -16,23 +16,16 @@ Este projeto funciona como um "Linktree" pessoal, onde você controla 100% dos d
 ## 📦 Como Clonar e Rodar
 
 1. **Clone o repositório:**
-   ```bash
-   git clone https://github.com/jonathaneamorim/BioLink
-   ```
+   git clone https://github.com/jonathaneamorim/BioLink.git
 
 2. **Entre na pasta e instale as dependências:**
-   ```bash
-   cd biolink
+   cd BioLink
    npm install
-   # ou
-   yarn install
-   ```
 
 3. **Rode o servidor de desenvolvimento:**
-   ```bash
    npm run dev
-   ```
-   Acesse [http://localhost:3000](http://localhost:3000)
+
+Acesse http://localhost:3000
 
 ---
 
@@ -70,29 +63,35 @@ Para que as imagens funcionem:
 3. **Fallback:** Se você não colocar uma imagem ou o nome estiver errado, o sistema carregará automaticamente a `/default-image.jpg`.
 
 ### 3. Links e Ícones
-Para adicionar novos links:
-1. Adicione um objeto no array `links` do JSON.
-2. Para o ícone, escolha um nome (ex: `instagram`, `linkedin`, `portfolio`).
+Para adicionar novos links, adicione um objeto no array `links` do JSON. O campo `icon` deve corresponder a um dos ícones disponíveis no sistema.
 
 ```json
 { 
   "id": 1, 
-  "label": "Meu Portfólio", 
-  "url": "[https://meu-site.com](https://meu-site.com)", 
-  "icon": "portfolio" 
+  "label": "Meu GitHub", 
+  "url": "https://github.com/seu-usuario", 
+  "icon": "github" 
 }
 ```
 
-**Importante:** Para que um novo ícone apareça, você deve importá-lo do [Lucide Icons](https://lucide.dev/icons/) e mapeá-lo no arquivo `app/page.tsx`:
+**Ícones Disponíveis por Padrão:**
+`coin`, `discord`, `facebook`, `github`, `globe`, `instagram`, `linkedin`, `onlyfans`, `tiktok`, `twitch`, `x`, `youtube`
 
-```tsx
-import { Briefcase } from 'lucide-react';
+**Como adicionar novos ícones:**
+Os ícones do projeto são gerenciados localmente para garantir melhor performance e personalização. Para adicionar um novo:
+1. Baixe o ícone desejado no formato `.svg` e coloque-o na pasta `src/data/icons/`.
+2. Abra o arquivo `src/components/icons-repository.tsx`.
+3. Importe o SVG e adicione-o ao objeto `iconRepository`:
 
-const iconMap = {
-  // ...outros ícones
-  portfolio: <Briefcase size={20} />
+```typescript
+import novoIcone from '@/data/icons/novo-icone.svg';
+
+export const iconRepository: Record<string, React.ReactNode> = {
+  novo: <Image src={novoIcone} alt="Novo Ícone" width={24} height={24} />
 };
 ```
+
+Feito isso, basta usar o nome `"novo"` no seu `user.json`.
 
 ---
 
@@ -111,7 +110,7 @@ export const sharedMetadata = {
   openGraph: {
     title: `${data.profile.nickname} - Links e Contato`,
     description: data.profile.bio,
-    url: '[https://seudominio.com](https://seudominio.com)',
+    url: 'https://seudominio.com',
     siteName: 'BioLink',
     images: [
       {
@@ -148,5 +147,9 @@ export const sharedMetadata = {
 - **Dark Mode:** O layout padrão é otimizado para fundo preto (`#000000`) e texto branco, ideal para economia de bateria em telas OLED.
 
 ---
+
+## 📄 Licença
+
+Este projeto está licenciado sob a licença MIT.
 
 Feito com ☕ e código.
