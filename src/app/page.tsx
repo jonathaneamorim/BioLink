@@ -8,7 +8,7 @@ import { ArrowRight, Share2, Check, Globe } from 'lucide-react';
 import { iconRepository } from './icons_repository';
 
 export default function HomePage() {
-  const { profile, links, theme } = data;
+  const { profile, links, theme, showCases } = data;
   const [copied, setCopied] = useState(false);
   const userImage = profile.profileImage || "/default-image.jpg";
 
@@ -50,6 +50,19 @@ export default function HomePage() {
           </h1>
           <p className="font-medium opacity-60 text-lg">{profile.username}</p>
         </Link>
+
+        <div className='w-full d-flex'>
+          {showCases.map((showCase) => (
+            showCase.showShowCase && (
+              <Link key={showCase.id} href={`/showcase/${showCase.id}`}>
+                <div className="mb-6 p-4 rounded-2xl shadow-lg border border-white/5 transition-all">
+                  <h2 className="text-xl font-bold mb-2">{showCase.showCaseName}</h2>
+                  <p className="text-sm opacity-80">{showCase.showCaseDescription}</p>
+                </div>
+              </Link>
+            )
+          ))}
+        </div>
 
         <div 
           className="w-full rounded-[32px] p-6 shadow-xl border border-white/5 transition-all"
