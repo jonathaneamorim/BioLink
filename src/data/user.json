@@ -52,13 +52,13 @@
       ]
     }
   ],
-  "contacts": {
-    "email": "jonathaneamorim@gmail.com",
-    "phone": "+55 00 00000-0000",
-    "linkedin": "linkedin.com/in/jonathanamorim/",
-    "github": "github.com/jonathaneamorim",
-    "telegram": ""
-  },
+  "contacts": [
+    {"id": 1, "label": "Email", "url": "jonathaneamorim@gmail.com", "icon": "mail"},
+    {"id": 2, "label": "Phone", "url": "+55 00 00000-0000", "icon": "phone"},
+    {"id": 3, "label": "LinkedIn", "url": "linkedin.com/in/jonathanamorim/", "icon": "linkedin"},
+    {"id": 4, "label": "GitHub", "url": "github.com/jonathaneamorim", "icon": "github"},
+    {"id": 5, "label": "Telegram", "url": "", "icon": "telegram"}
+  ],
   "theme": {
       "pageBackground": "#0f172a",
       "pageText": "#f8fafc",
