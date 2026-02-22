@@ -1,16 +1,16 @@
 "use client";
 import { useState } from 'react';
 import Link from 'next/link';
-import Image from 'next/image';
+
 import data from '@/data/user.json';
 
 import { ArrowRight, Share2, Check, Globe } from 'lucide-react';
 import { iconRepository } from './icons_repository';
+import { Profile } from '@/components/Profile';
 
 export default function HomePage() {
-  const { profile, links, theme, showCases } = data;
+  const { links, theme, showCases } = data;
   const [copied, setCopied] = useState(false);
-  const userImage = profile.profileImage || "/default-image.jpg";
 
   const handleShare = async () => {
     try {
@@ -28,28 +28,7 @@ export default function HomePage() {
       style={{ backgroundColor: theme.pageBackground, color: theme.pageText }}
     >
       <section className="w-full max-w-md mt-12">
-        <Link 
-          href={`/${profile.username.replace('@', '')}`}
-          className="flex flex-col items-center group mb-10 text-center"
-        >
-          <div 
-            className="relative w-28 h-28 rounded-full overflow-hidden border-4 shadow-xl mb-4 group-hover:scale-105 transition-transform"
-            style={{ borderColor: theme.cardBackground }}
-          >
-            <Image 
-              src={userImage} 
-              alt={profile.name} 
-              fill 
-              className="object-cover" 
-              priority
-              sizes="112px"
-            />
-          </div>
-          <h1 className="text-3xl font-black group-hover:opacity-80 transition-opacity">
-            {profile.nickname}
-          </h1>
-          <p className="font-medium opacity-60 text-lg">{profile.username}</p>
-        </Link>
+        <Profile />
 
         <div className='w-full d-flex'>
           {showCases.map((showCase) => (
