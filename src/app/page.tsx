@@ -30,18 +30,27 @@ export default function HomePage() {
       <section className="w-full max-w-md mt-12">
         <Profile />
 
-        <div className='w-full d-flex'>
-          {showCases.map((showCase) => (
-            showCase.showShowCase && (
-              <Link key={showCase.id} href={`/showcase/${showCase.id}`}>
-                <div className="mb-6 p-4 rounded-2xl shadow-lg border border-white/5 transition-all">
-                  <h2 className="text-xl font-bold mb-2">{showCase.showCaseName}</h2>
-                  <p className="text-sm opacity-80">{showCase.showCaseDescription}</p>
-                </div>
-              </Link>
-            )
-          ))}
-        </div>
+        {showCases && showCases.length > 0 && (
+          <div className='w-full d-flex'>
+            {showCases.map((showCase) => (
+              showCase.showShowCase && (
+                <Link key={showCase.id} href={`/showcase/${showCase.id}`}>
+                  <div 
+                    className="mb-6 p-4 rounded-2xl shadow-lg border border-white/5 transition-all w-full hover:scale-[1.02] active:scale-95 flex items-center justify-between gap-2" 
+                    style={{ backgroundColor: theme.cardBackground, color: theme.cardText }}>
+                     <div>
+                        <h2 className="text-xl font-bold mb-2">{showCase.showCaseName}</h2>
+                        <p className="text-sm opacity-80">{showCase.showCaseDescription}</p>
+                     </div>
+                     <div>
+                        <ArrowRight size={18} className="opacity-50 group-hover:opacity-100 transition-all" />
+                     </div>
+                  </div>
+                </Link>
+              )
+            ))}
+          </div>
+        )}
 
         <div 
           className="w-full rounded-[32px] p-6 shadow-xl border border-white/5 transition-all"
