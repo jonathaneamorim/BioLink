@@ -24,7 +24,7 @@
           "id": 2,
           "name": "Monitor",
           "description": "LG UltraFine 27MD5KL-B - Monitor 5K de 27 polegadas",
-          "image": "./monitor.jpg",
+          "image": "/showCaseProducts/monitor.jpg",
           "link": "https://www.lg.com/us/monitors/lg-27md5kl-b-ultrafine-5k-monitor"
         },
         {
@@ -53,11 +53,41 @@
     }
   ],
   "contacts": [
-    {"id": 1, "label": "Email", "url": "jonathaneamorim@gmail.com", "icon": "mail"},
-    {"id": 2, "label": "Phone", "url": "+55 00 00000-0000", "icon": "phone"},
-    {"id": 3, "label": "LinkedIn", "url": "linkedin.com/in/jonathanamorim/", "icon": "linkedin"},
-    {"id": 4, "label": "GitHub", "url": "github.com/jonathaneamorim", "icon": "github"},
-    {"id": 5, "label": "Telegram", "url": "", "icon": "telegram"}
+    {
+      "id": 1,
+      "label": "Email",
+      "value": "jonathaneamorim@gmail.com",
+      "href": "mailto:jonathaneamorim@gmail.com",
+      "icon": "mail"
+    },
+    {
+      "id": 2,
+      "label": "Phone",
+      "value": "+55 00 00000-0000",
+      "href": "https://wa.me/47991291070",
+      "icon": "phone"
+    },
+    {
+      "id": 3,
+      "label": "LinkedIn",
+      "value": "jonathanamorim",
+      "href": "https://linkedin.com/in/jonathanamorim",
+      "icon": "linkedin"
+    },
+    {
+      "id": 4,
+      "label": "GitHub",
+      "value": "jonathaneamorim",
+      "href": "https://github.com/jonathaneamorim",
+      "icon": "github"
+    },
+    {
+      "id": 5,
+      "label": "Telegram",
+      "value": "jonathaneamorim",
+      "href": "https://t.me/jonathaneamorim",
+      "icon": "telegram"
+    }
   ],
   "theme": {
       "pageBackground": "#0f172a",
