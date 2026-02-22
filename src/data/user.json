@@ -46,8 +46,8 @@
           "id": 1,
           "name": "Perfume",
           "description": "Um belo perfume para homens, com notas amadeiradas e cítricas, perfeito para o dia a dia.",
-          "image": "./projetoA.jpg",
-          "link": "https://jonathaneamorim.github.io/"
+          "image": "https://m.media-amazon.com/images/I/617t6oS+jHL._AC_SY300_SX300_QL70_ML2_.jpg",
+          "link": "/"
         }
       ]
     }
